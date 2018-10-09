@@ -1,8 +1,8 @@
 {
   "name": "colorider",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Console styling (Apple Terminal, iTerm)",
-  "main": "index.js",
+  "main": "lib/colorider.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexkulagin/colorider.git"
