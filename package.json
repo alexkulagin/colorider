@@ -1,6 +1,6 @@
 {
   "name": "colorider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Console styling (Apple Terminal, iTerm)",
   "main": "lib/colorider.js",
   "repository": {
