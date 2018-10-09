@@ -1,16 +1,17 @@
 {
   "name": "colorider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Console styling (Apple Terminal, iTerm)",
+  "author": "alexkulagin.com",
+  "license": "MIT",
   "main": "lib/colorider.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexkulagin/colorider.git"
   },
-  "author": "alexkulagin.com",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/alexkulagin/colorider/issues"
   },
-  "homepage": "https://github.com/alexkulagin/colorider#readme"
+  "homepage": "https://github.com/alexkulagin/colorider#readme",
+  "scripts": {}
 }
