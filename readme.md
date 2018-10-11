@@ -24,7 +24,8 @@ A node.js module for output styling in Terminal, iTerm, etc.
 ```js
 const Cr = require('colorider');
 console.log(Cr.cyan('Hi colorider!'));
-console.log(colo.cyan('Hi Colorider!') === '\u001B[36mHi Colorider!\u001B[39m'); // ˃₋  true
+console.log(colo.cyan('Text') === '\u001B[36mText\u001B[39m');
+// ˃₋  true
 ```
 
 
@@ -34,37 +35,76 @@ console.log(colo.cyan('Hi Colorider!') === '\u001B[36mHi Colorider!\u001B[39m');
 
 ### Supported tags
 The following tags works with most terminals and terminals emulators.
-```sh
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃::::::::::::::::::::::::: ᵈᵉᶠᵃᵘˡᵗ ᵖʳᵉˢᵉᵗˢ :::::::::::::::::::::::::┃
-┃:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::┃
-┣━━━━━━━━━━━━━━━━━━━━━━━━┳┳━━━━━━━━━━━━━━━━━━━━━━━━┳┳━━━━━━━━━━━━━━━┫
-┃ FOREGROUND             ┃┃ BACKGROUND             ┃┃ MODIFIER      ┃
-┃ ‾‾‾‾‾‾‾‾‾‾             ┃┃ ‾‾‾‾‾‾‾‾‾‾             ┃┃ ‾‾‾‾‾‾‾‾      ┃
-┡━━━━━━━━━┯━━━━━━━━━━━━━━╇╇━━━━━━━━━┯━━━━━━━━━━━━━━╇╇━━━━━━━━━━━━━━━┩
-│ black   │ gray         ││ BLACK   │ GRAY         ││ bold          │
-├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
-│ red     │ lightRed     ││ RED     │ lightRED     ││ dim           │
-├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
-│ green   │ lightGreen   ││ GREEN   │ lightGREEN   ││ italic        │
-├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
-│ yellow  │ lightYellow  ││ YELLOW  │ lightYELLOW  ││ underline     │
-├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
-│ blue    │ lightBlue    ││ BLUE    │ lightBLUE    ││ blink         │
-├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
-│ magenta │ lightMagenta ││ MAGENTA │ lightMAGENTA ││ inverse       │
-├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
-│ cyan    │ lightCyan    ││ CYAN    │ lightCYAN    ││ hidden        │
-├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
-│ light   │ white        ││ LIGHT   │ WHITE        ││ strike        │
-├─────────┴──────────────┴┴─────────┴──────────────┴┴───────────────┤
-│:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::│
-╰───────────────────────────────────────────────────────────────────╯
-```
-> *The **colors** can vary depending of the terminal configuration.*
+
+<table>
+	<tr>
+		<th align="left">Modifiers</th>
+		<th colspan="2">Foreground</th>
+		<th colspan="2">Background</th>
+	</tr><tr>
+		<td><code>bold</code></td>
+		<td align="center"><code>black</code></td>
+		<td align="center"><code>gray</code></td>
+		<td align="center"><code>BLACK</code></td>
+		<td align="center"><code>GRAY</code></td>
+	</tr><tr>
+		<td><code>dim</code></td>
+		<td align="center"><code>red</code></td>
+		<td align="center"><code>lightRed</code></td>
+		<td align="center"><code>RED</code></td>
+		<td align="center"><code>lightRED</code></td>
+	</tr><tr>
+		<td><code>italic</code></td>
+		<td align="center"><code>green</code></td>
+		<td align="center"><code>lightGreen</code></td>
+		<td align="center"><code>GREEN</code></td>
+		<td align="center"><code>lightGREEN</code></td>
+	</tr><tr>
+		<td><code>underline</code></td>
+		<td align="center"><code>yellow</code></td>
+		<td align="center"><code>lightYellow</code></td>
+		<td align="center"><code>YELLOW</code></td>
+		<td align="center"><code>lightYELLOW</code></td>
+	</tr><tr>
+		<td><code>blink</code></td>
+		<td align="center"><code>blue</code></td>
+		<td align="center"><code>lightBlue</code></td>
+		<td align="center"><code>BLUE</code></td>
+		<td align="center"><code>lightBLUE</code></td>
+	</tr><tr>
+		<td><code>inverse</code></td>
+		<td align="center"><code>magenta</code></td>
+		<td align="center"><code>lightMagenta</code></td>
+		<td align="center"><code>MAGENTA</code></td>
+		<td align="center"><code>lightMAGENTA</code></td>
+	</tr><tr>
+		<td><code>hidden</code></td>
+		<td align="center"><code>cyan</code></td>
+		<td align="center"><code>lightCyan</code></td>
+		<td align="center"><code>CYAN</code></td>
+		<td align="center"><code>lightCYAN</code></td>
+	</tr><tr>
+		<td><code>strike</code></td>
+		<td align="center"><code>light</code></td>
+		<td align="center"><code>white</code></td>
+		<td align="center"><code>LIGHT</code></td>
+		<td align="center"><code>WHITE</code></td>
+	</tr>
+</table>
 
 
 ### Examples
+
+
+#### Modifiers (formatting text)
+```js
+console.log(Cr.bold('Bold modifier'));
+console.log(Cr.italic('Italic modifier'));
+console.log(Cr.underline('Underline modifier'));
+```
+<a href="#"><img width="460px" src="/media/example-modifiers.png" alt="Modifiers tags"></a>
+<br>
+
 
 #### Foreground (text color)
 ```js
@@ -75,6 +115,7 @@ console.log(Cr.green('Green color'));
 <a href="#"><img width="460px" src="/media/example-foreground.png" alt="Foreground tags"></a>
 <br>
 
+
 #### Background (background color)
 ```js
 console.log(Cr.BLACK('Black background'));
@@ -83,20 +124,12 @@ console.log(Cr.WHITE('White background'));
 ```
 <a href="#"><img width="460px" src="/media/example-background.png" alt="Background tags"></a>
 <br>
-
-#### Modifiers (formatting text)
-```js
-console.log(Cr.bold('Bold modifier'));
-console.log(Cr.italic('Italic modifier'));
-console.log(Cr.underline('Underline modifier'));
-```
-<a href="#"><img width="460px" src="/media/example-modifiers.png" alt="Modifiers tags"></a>
-<br>
 <br>
 
 
 
 ## Base features
+
 
 #### Style combining
 ```js
@@ -104,6 +137,7 @@ console.log(Cr.red('Red') + ' Normal ' + Cr.blue('Blue'));
 ```
 <a href="#"><img width="460px" src="/media/example-style-combining.png" alt="Style combining"></a>
 <br>
+
 
 #### Chaining tags
 ```js
