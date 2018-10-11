@@ -1,17 +1,47 @@
 {
-  "name": "colorider",
-  "version": "1.0.3",
-  "description": "Console styling (Apple Terminal, iTerm)",
-  "author": "alexkulagin.com",
-  "license": "MIT",
-  "main": "lib/colorider.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexkulagin/colorider.git"
-  },
-  "bugs": {
-    "url": "https://github.com/alexkulagin/colorider/issues"
-  },
-  "homepage": "https://github.com/alexkulagin/colorider#readme",
-  "scripts": {}
+	"name": "colorider",
+	"version": "1.0.5",
+	"description": "A module for output styling in Terminal, iTerm, etc.",
+	"author": "alexkulagin.com",
+	"main": "lib/colorider.js",
+	"scripts": {},
+	"engines": {
+		"node": ">=6"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alexkulagin/colorider.git"
+	},
+	"bugs": {
+		"url": "https://github.com/alexkulagin/colorider/issues"
+	},
+	"homepage": "https://github.com/alexkulagin/colorider#readme",
+	"keywords": [
+		"console",
+		"terminal",
+		"iterm",
+		"colors",
+		"colour",
+		"cli",
+		"ansi",
+		"string",
+		"str",
+		"ansi",
+		"style",
+		"styles",
+		"styling",
+		"tty",
+		"formatting",
+		"rgb",
+		"256",
+		"shell",
+		"xterm",
+		"log",
+		"logging",
+		"command-line",
+		"theme",
+		"themes",
+		"text"
+	],
+	"license": "MIT"
 }
