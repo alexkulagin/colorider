@@ -32,15 +32,11 @@
 		"styling",
 		"tty",
 		"formatting",
-		"rgb",
-		"256",
 		"shell",
 		"xterm",
 		"log",
 		"logging",
 		"command-line",
-		"theme",
-		"themes",
 		"text"
 	],
 	"license": "MIT"
