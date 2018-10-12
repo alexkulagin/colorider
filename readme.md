@@ -37,12 +37,14 @@ console.log(Cr.cyan('Text') === '\u001B[36mText\u001B[39m');
 
 ## Tags preset
 The following tags works with most terminals and terminals emulators.
-<br><br>
+
+<br>
 
 
 ### Modifiers (text formatting)
 `bold`&ensp;`dim`&ensp;`italic`&ensp;`underline`&ensp;`blink`&ensp;`inverse`&ensp;`hidden`&ensp;`strike`
-<br><br>
+
+<br>
 
 
 ### Color scheme
@@ -97,7 +99,8 @@ The following tags works with most terminals and terminals emulators.
 		<td><code>WHITE</code></td>
 	</tr>
 </table>
-<br><br>
+
+<br>
 
 
 ### Converters
@@ -114,7 +117,8 @@ The special tags for color models conversion to ansi code.
 		<td align="center"><code>HEX</code></td>
 	</tr>
 </table>
-<br><br>
+
+<br>
 
 
 ### Example
@@ -143,14 +147,10 @@ console.log(Cr.HEX('#EEEEEE')('White background'));
 
 ## Conversion level
 
-<a href="#"><img width="460px" src="/media/example-comparing-level.png" alt="Background tags"></a>
-<br>
-
-
-### Levels
-
 <table>
 	<tr>
+		<th align="left" colspan="2">Levels</th>
+	</tr><tr>
 		<td align="center"><code>0</code></td>
 		<td>disable conversion</td>
 	</tr><tr>
@@ -164,6 +164,9 @@ console.log(Cr.HEX('#EEEEEE')('White background'));
 		<td>16 777 216 color variations (24-bit True color)</td>
 	</tr>
 </table>
+
+<a href="#"><img width="460px" src="/media/example-comparing-level.png" alt="Background tags"></a>
+<br>
 
 ```js
 console.log('level:', Cr.level); // default 2
