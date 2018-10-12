@@ -1,6 +1,6 @@
 {
 	"name": "colorider",
-	"version": "1.0.8",
+	"version": "1.0.18",
 	"description": "A module for output styling in Terminal, iTerm, etc.",
 	"author": "alexkulagin.com",
 	"main": "lib/colorider.js",
