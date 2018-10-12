@@ -41,13 +41,13 @@ The following tags works with most terminals and terminals emulators.
 <br>
 
 
-### Modifiers (text formatting)
+### Modifier tags (text formatting)
 `bold`&ensp;`dim`&ensp;`italic`&ensp;`underline`&ensp;`blink`&ensp;`inverse`&ensp;`hidden`&ensp;`strike`
 
 <br>
 
 
-### Color scheme
+### Color scheme tags
 <table>
 	<tr>
 		<th align="left" colspan="2">Foreground (text)</th>
@@ -103,7 +103,7 @@ The following tags works with most terminals and terminals emulators.
 <br>
 
 
-### Converters
+### Converter tags
 The special tags for color models conversion to ansi code.
 <table>
 	<tr>
@@ -147,6 +147,23 @@ console.log(Cr.HEX('#EEEEEE')('White background'));
 
 ## Conversion level
 
+```js
+console.log('level:', Cr.level); // default 2
+
+Cr.level = 1;
+console.log(Cr.RGB(255, 250, 154)('Conversion level 1'));
+
+Cr.level = 2;
+console.log(Cr.RGB(255, 250, 154)('Conversion level 2'));
+
+Cr.level = 3;
+console.log(Cr.RGB(255, 250, 154)('Conversion level 3'));
+
+```
+<a href="#"><img width="460px" src="/media/example-change-level.png" alt="Background tags"></a>
+
+<br>
+
 <table>
 	<tr>
 		<th align="left" colspan="2">Levels</th>
@@ -164,24 +181,9 @@ console.log(Cr.HEX('#EEEEEE')('White background'));
 		<td>16 777 216 color variations (24-bit True color)</td>
 	</tr>
 </table>
-
-<a href="#"><img width="460px" src="/media/example-comparing-level.png" alt="Background tags"></a>
 <br>
 
-```js
-console.log('level:', Cr.level); // default 2
-
-Cr.level = 1;
-console.log(Cr.RGB(255,250,154)('Conversion level 1'));
-
-Cr.level = 2;
-console.log(Cr.RGB(255,250,154)('Conversion level 2'));
-
-Cr.level = 3;
-console.log(Cr.RGB(255,250,154)('Conversion level 3'));
-
-```
-<a href="#"><img width="460px" src="/media/example-change-level.png" alt="Background tags"></a>
+<a href="#"><img width="460px" src="/media/example-comparing-level.png" alt="comparing level"></a>
 <br><br><br>
 
 
