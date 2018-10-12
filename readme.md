@@ -1,7 +1,7 @@
 
 <cover>
 	<a href="#">
-		<img width="100%" src="/media/headline-cover.svg" alt="Colorider">
+		<img width="100%" src="/media/cover.svg" alt="Colorider">
 	</a>
 </cover>
 <br><br>
