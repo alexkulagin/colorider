@@ -162,6 +162,8 @@ console.log(Cr.RGB(255, 250, 154)('Conversion level 3'));
 ```
 <a href="#"><img width="460px" src="/media/example-change-level.png" alt="Background tags"></a>
 
+<a href="#"><img width="460px" src="/media/example-comparing-level.png" alt="comparing level"></a>
+
 <br>
 
 <table>
@@ -181,9 +183,6 @@ console.log(Cr.RGB(255, 250, 154)('Conversion level 3'));
 		<td>16 777 216 color variations (24-bit True color)</td>
 	</tr>
 </table>
-<br>
-
-<a href="#"><img width="460px" src="/media/example-comparing-level.png" alt="comparing level"></a>
 <br><br><br>
 
 
@@ -205,6 +204,22 @@ console.log(Cr.red('Red') + ' Normal ' + Cr.blue('Blue'));
 console.log(Cr.white.bold.underline('White bold underline'));
 ```
 <a href="#"><img width="460px" src="/media/example-chain-tags.png" alt="Chaining tags"></a>
+<br><br>
+
+
+#### Style definition
+```js
+const strBold = Cr.bold;
+const strRed = strBold.red;
+const strWhiteBg = strRed.HEX('#FFFFFF');
+
+console.log(Cr('Normal'));
+
+console.log(strBold('Bold'));
+console.log(strRed('Bold Red'));
+console.log(strRed('Bold Red White background'));
+```
+<a href="#"><img width="460px" src="/media/example-style-definition.png" alt="Style definition"></a>
 <br><br><br>
 
 
