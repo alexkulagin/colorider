@@ -220,6 +220,21 @@ console.log(strRed('Bold Red'));
 console.log(strRed('Bold Red White background'));
 ```
 <a href="#"><img width="460px" src="/media/example-style-definition.png" alt="Style definition"></a>
+<br><br>
+
+
+#### Nested tags
+```js
+// string
+console.log('before', Cr.red('( a', Cr.yellow('( b', Cr.green('( c )'), 'b )'), 'a )'), 'after');
+
+// difine
+const strRed = Cr.red('( c )');
+const strYellow = Cr.yellow('( b', strRed, 'b )');
+const strGreen = Cr.green('( a', strYellow, 'a )');
+console.log('before', strGreen, 'after');
+```
+<a href="#"><img width="460px" src="/media/example-nested-tags.png" alt="Nested tags"></a>
 <br><br><br>
 
 
